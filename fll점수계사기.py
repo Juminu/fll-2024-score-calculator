@@ -4,7 +4,7 @@ from streamlit_float import *
 ss =st.session_state
 
 if 'score' not in ss:
-    ss.score = 0 
+    ss.score = 10
     # ss.장비점검 = 0
     # ss.삼디영화관 = 0 
     # ss.극장장면전환 = 0
