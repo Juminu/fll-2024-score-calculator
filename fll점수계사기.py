@@ -154,12 +154,7 @@ def cal_score():
         print("영화세트장 점수업")
 
     # 점수2
-    if ss.사운드믹서 == True:
-        ss.사운드믹서점수 = 10
-        print("사운드믹서 점수업")
-    elif ss.사운드믹서 == False:
-        ss.사운드믹서점수 = 0
-        print("사운드믹서 점수업")
+    ss.사운드믹서점수 = (ss.사운드믹서) * 10
 
     # 점수2
     if ss.라이트쇼 == '점수없음(0점)':
@@ -326,7 +321,7 @@ st.write('###### 영화세트장')
 st.checkbox('영화세트장(보트가 매트에 닿아있고 검은라인을 완전히 통과한경우 10점) ', key='영화세트장', on_change=cal_score)
 st.checkbox('영화세트장(카메라가 매트에 닿아있고 적어도 일부가 카메라 목표영역에 있는경우 10점) ', key='영화세트장1', on_change=cal_score)
 st.divider()
-st.checkbox('###### 사운드믹서(10점추가) ', key='사운드믹서', on_change=cal_score)
+st.slider('###### 사운드믹서',min_value=0,max_value=3,value=0, key='사운드믹서', on_change=cal_score)
 st.write('사운드믹서가 올라간 경우')
 st.divider()
 st.write("###### 라이트쇼")
