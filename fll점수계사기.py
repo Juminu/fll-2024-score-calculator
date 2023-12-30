@@ -286,7 +286,7 @@ footer_container = st.container()
 with footer_container:
     st.write("## score:", ss.score )
 
-footer_container.float("bottom: 0;background-color: rgba(255,255,255,0.8); height: 13vh;text-align:center;padding: 2vh")
+footer_container.float("bottom: 0;background-color: rgba(255,255,255,0.8); height: 13vh;text-align:center;padding: 2vh;pointer-events: none;")
 
 st.write('# FLL 2023-2024 점수계산기')
 
